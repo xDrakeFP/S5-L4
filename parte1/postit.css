@@ -1,0 +1,135 @@
+@keyframes attach {
+  0% {
+    visibility: visible;
+    transform: scale(3) rotate(var(--rotation));
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  99% {
+    transform: scale(1) rotate(var(--rotation));
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+body {
+  background-color: #ddd;
+}
+main {
+  font-family: "Indie Flower", cursive;
+}
+h2 {
+  font-weight: 600;
+  font-size: 2.5em;
+  margin-bottom: 1em;
+}
+
+.card p {
+  font-size: 1.5em;
+}
+.card {
+  position: relative;
+  max-width: 350px;
+  min-width: 350px;
+  margin-bottom: 5em;
+  height: 280px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 25px -5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 10px 10px 25px -5px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 25px -5px rgba(0, 0, 0, 0.75);
+  visibility: hidden;
+  transform: rotate(var(--rotation));
+}
+.inside div:hover {
+  position: relative;
+  transform: scale(1.2) rotate(0deg);
+  z-index: 100;
+}
+.yellow {
+  --rotation: -7deg;
+  background-image: linear-gradient(
+    to bottom,
+    #d4c97d,
+    #c9bf76,
+    #bfb46f,
+    #b4aa68,
+    #aaa061
+  );
+}
+.green {
+  --rotation: 9deg;
+  background-image: linear-gradient(
+    to bottom,
+    #cafccb,
+    #bfeac0,
+    #b5d9b5,
+    #aac7ab,
+    #a0b6a0
+  );
+}
+.blue {
+  --rotation: -11deg;
+  background-image: linear-gradient(
+    to bottom,
+    #cacafa,
+    #bebee7,
+    #b2b3d4,
+    #a6a7c1,
+    #9b9caf
+  );
+}
+#board {
+  padding: 4em;
+  width: 1600px;
+  margin: auto;
+  background-color: #999999;
+  display: flex;
+  box-shadow: 0px 0px 0px 4px rgb(132, 116, 116) inset;
+  border: 1em solid rgb(9, 97, 9);
+  border-radius: 20px;
+}
+.inside {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.inside div:nth-child(1) {
+  animation: 1s attach 1s ease-in forwards;
+  z-index: 1;
+}
+.inside div:nth-child(2) {
+  animation: 1s attach 3s ease-in forwards;
+  z-index: 3;
+}
+.inside div:nth-child(3) {
+  animation: 1s attach 6s ease-in forwards;
+  z-index: 6;
+}
+.inside div:nth-child(4) {
+  animation: 1s attach 5s ease-in forwards;
+  z-index: 5;
+}
+.inside div:nth-child(5) {
+  animation: 1s attach 8s ease-in forwards;
+  z-index: 8;
+}
+.inside div:nth-child(6) {
+  animation: 1s attach 7s ease-in forwards;
+  z-index: 7;
+}
+.inside div:nth-child(7) {
+  animation: 1s attach 4s ease-in forwards;
+  z-index: 4;
+}
+.inside div:nth-child(8) {
+  animation: 1s attach 2s ease-in forwards;
+  z-index: 2;
+}
