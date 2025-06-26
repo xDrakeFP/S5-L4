@@ -49,8 +49,7 @@ h2 {
 }
 .inside div:hover {
   position: relative;
-  transform: scale(1.2) rotate(0deg);
-  z-index: 100;
+  transform: scale(1.4) rotate(0deg) scaleZ(100);
 }
 .yellow {
   --rotation: -7deg;
